@@ -1,0 +1,30 @@
+{
+  "fonts": [
+    "iconvault_8e0a9f31b2955b163935b91360d24f6e.ttf",
+    "iconvault_8e0a9f31b2955b163935b91360d24f6e.woff",
+    "iconvault_8e0a9f31b2955b163935b91360d24f6e.eot",
+    "iconvault_8e0a9f31b2955b163935b91360d24f6e.svg"
+  ],
+  "templates": [
+    "iconvault-preview.html",
+    "iconvault-preview.css"
+  ],
+  "file_name": "iconvault_8e0a9f31b2955b163935b91360d24f6e",
+  "glyphs": [
+    "salsas",
+    "postres",
+    "entrantes",
+    "huevo",
+    "estrella",
+    "segundos",
+    "cocteles",
+    "tostas",
+    "acompanamientos",
+    "principal",
+    "bebidas",
+    "bocadillos",
+    "unico",
+    "primeros",
+    "ensaladas"
+  ]
+}

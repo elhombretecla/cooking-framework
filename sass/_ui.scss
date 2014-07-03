@@ -1,0 +1,414 @@
+// POSITION 
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.block {
+    display: block !important;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+// FONTS
+@font-face {
+    font-family: 'gotham';
+    src: url('../fonts/gotham-light.eot');
+    src: url('../fonts/gotham-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-light.woff') format('woff'),
+         url('../fonts/gotham-light.ttf') format('truetype'),
+         url('../fonts/gotham-light.svg#gotham_light_ultraregular') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham';
+    src: url('../fonts/gotham-book.eot');
+    src: url('../fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-book.woff') format('woff'),
+         url('../fonts/gotham-book.ttf') format('truetype'),
+         url('../fonts/gotham-book.svg#gotham_book_ultraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham';
+    src: url('../fonts/gotham-medium.eot');
+    src: url('../fonts/gotham-medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-medium.woff') format('woff'),
+         url('../fonts/gotham-medium.ttf') format('truetype'),
+         url('../fonts/gotham-medium.svg#gotham_medium_ultraregular') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham';
+    src: url('../fonts/gotham-bold.eot');
+    src: url('../fonts/gotham-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-bold.woff') format('woff'),
+         url('../fonts/gotham-bold.ttf') format('truetype'),
+         url('../fonts/gotham-bold.svg#gotham_bold_ultraregular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham';
+    src: url('../fonts/gotham-ultra-webfont.eot');
+    src: url('../fonts/gotham-ultra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-ultra-webfont.woff') format('woff'),
+         url('../fonts/gotham-ultra-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-ultra-webfont.svg#gotham_htf_ultraregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+// TEXT SELECTION
+::selection {
+  background: $primary-color;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: $primary-color;
+  text-shadow: none;
+}
+
+// GENERAL
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-gray;
+    &:hover {
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+
+.row {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .row-inside {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .row-center {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.last {
+    @include last();
+}
+
+// TITLES
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+// TITLE BOXES
+.title-inside-big {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+    color: white;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1.6% 3%;
+    a {
+        color: white;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.title-inside-small {
+    @extend .title-inside-big;
+    font-size: 1.4em;
+}
+
+// BTN
+.btn {
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    padding: 15px 20px;
+    margin: 6px 0 6px 0;
+    font-family: 'gotham', sans-serif;
+    color: $dark-gray;
+    text-align: center;
+    background-color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+    border: none;
+    border-bottom: 4px solid $pearl-gray;
+    @include transition(100ms, linear);
+    &:hover {
+        border-bottom: 1px solid $pearl-gray;
+        @include translate(0px, 4px);
+        margin: 5px 0 10px 0;
+        color: $dark-gray;
+    }
+    // BTN SMALLER
+    &.btn-mini {
+        padding: 10px 14px;
+        font-size: 1em;
+    }
+    // BTN GRAY FOR WHITE BG CONTRAST
+    &.btn-gray {
+        background-color: $light-gray;
+        border-bottom: 4px solid $pearl-gray;
+        color: $dark-gray;
+        &:hover {
+            border-bottom: 1px solid $pearl-gray;
+        }
+    }
+    // BTN YELLOW FOR HIGHLIGHT BTNS
+    &.btn-yellow {
+        background-color: $primary-color;
+        color: white;
+        border-bottom: 4px solid darken($primary-color, 6%);
+        &:hover {
+            border-bottom: 1px solid darken($primary-color, 6%);
+        }
+    }
+    // BTN RED FOR DELETE BTNS
+    &.btn-red {
+        background-color: $error;
+        color: white;
+        border-bottom: 4px solid darken($error, 15%);
+        &:hover {
+            border-bottom: 1px solid darken($error, 15%);
+        }
+    }
+    // BTN GREEN FOR SUCCESS BTNS
+    &.btn-green {
+        background-color: $success;
+        color: white;
+        border-bottom: 4px solid darken($success, 15%);
+        &:hover {
+            border-bottom: 1px solid darken($success, 15%);
+        }
+    }
+    // BTN BLUE FOR INFO BTNS
+    &.btn-blue {
+        background-color: $info;
+        color: white;
+        border-bottom: 4px solid darken($info, 15%);
+        &:hover {
+            border-bottom: 1px solid darken($info, 15%);
+        }
+    }
+}
+
+// SHARE BTNS
+.share-bar {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    a {
+        color: white;
+        display: inline-block;
+        padding: 10px 12px;
+        font-size: 1.5em;
+        line-height: 1;
+        &.facebook {
+            background-color: $facebook;
+        }
+        &.twitter {
+            background-color: $twitter;
+        }
+        &.googleplus {
+            background-color: $google;
+        }
+        &.pinterest {
+            background-color: $pinterest;
+        }
+        &.instagram {
+            background-color: $instagram;
+        }
+        &.linkedin {
+            background-color: $linkedin;
+        }
+        &.youtube {
+            background-color: $youtube;
+        }
+        &.vimeo {
+            background-color: $vimeo;
+        }
+        &.mail, &.print {
+            background-color: $medium-gray;
+        }
+        &.like {
+            background-color: $dark-gray;
+        }
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+}
+
+// MESSAGES
+.msg {
+    display: none;/* remove for view message */
+    position: fixed;
+    top: 0;
+    padding: 15px 20px;
+    margin: 0;
+    width: 100%;
+    font-family: 'gotham', sans-serif;
+    color: $dark-gray;
+    text-align: center;
+    background-color: white;
+    font-size: 1em;
+    border-bottom: 4px solid $pearl-gray;
+    z-index: 999;
+    h3, p {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    i {
+        float: right;
+        font-size: 1.4em;
+        cursor: pointer;
+        &:hover {
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+    }
+    // NORMAL MESSAGE
+    &.msg-gray {
+        color: $dark-gray;
+        background-color: white;
+        border-bottom: 4px solid $pearl-gray;
+    }
+    // ERROR MESSAGE
+    &.msg-red {
+        color: white;
+        background-color: $error;
+        border-bottom: 4px solid darken($error, 15%);
+    }
+    // SUCCESS MESSAGE
+    &.msg-green {
+        color: white;
+        background-color: $success;
+        border-bottom: 4px solid darken($success, 15%);
+    }
+    // INFO MESSAGE
+    &.msg-blue {
+        color: white;
+        background-color: $info;
+        border-bottom: 4px solid darken($info, 15%);
+    }
+    // COCINA MESSAGE
+    &.msg-yellow {
+        color: white;
+        background-color: $primary-color;
+        border-bottom: 4px solid darken($primary-color, 15%);
+    }
+}
+
+// COLORS
+.bg-lightgray {
+    background-color: $light-gray;
+}
+
+.bg-mediumgray {
+    background-color: $medium-gray;
+}
+
+.bg-darkgray {
+    background-color: $dark-gray;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-yellow {
+    background-color: $primary-color;
+}
+
+.title-darkgray {
+    color: $dark-gray;
+}
+
+.title-yellow {
+    color: $primary-color;
+}
+
+.title-white {
+    color: white;
+}
+
+// SET LAYOUT
+.dashed {
+    border-bottom: 3px dashed $pearl-gray;
+}
+
+.translate-3d-menu {
+    @include translate-3d(-70%, 0, 0);
+}
+
+// RESPONSIVE UI
+@media screen and (max-width: 900px) {
+    .msg {
+        i { float: none; font-size: 2em; }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title-inside-big { font-size: 1.8em; }
+    .title-inside-small { font-size: 1em; }
+    .btn { width: 90%; }
+    .share-bar { 
+        a { padding: 6px 8px; }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .share-bar { 
+        a { padding: 5px 7px; font-size: 1.4em; }
+    }
+}

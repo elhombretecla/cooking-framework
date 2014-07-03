@@ -1,0 +1,509 @@
+<!-- COOKING FRAMEWORK by elhombretecla ©2014 -->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Elhombretecla | COOKING FRAMEWORK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/font-framework/style.css">
+    <link rel="stylesheet" href="fonts/cocina-icons/cocina-icons.css">
+    <!-- jquery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/features.js"></script>
+    <!-- remove livereload -->
+    <script src="http://localhost:35729/livereload.js"></script>
+
+    <!-- demo scripts (NO FRAMEWORK)-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#btn-msg-1').click(function() {
+                $('.msg-gray').show('fast');
+            });
+            $('#btn-msg-2').click(function() {
+                $('.msg-red').show('fast');
+            });
+            $('#btn-msg-3').click(function() {
+                $('.msg-green').show('fast');
+            });
+            $('#btn-msg-4').click(function() {
+                $('.msg-blue').show('fast');
+            });
+            $('#btn-msg-5').click(function() {
+                $('.msg-yellow').show('fast');
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.nav-btn.icon-menu').mouseover(function() {
+                $('.nav-res').css('top', '0px');
+                $(this).css('top', '53px');
+            });
+
+            $('.nav-res').mouseleave(function() {
+                $(this).css('top', '-54px');
+                $('.nav-btn.icon-menu').css('top', '0px');
+                // if( $('.nav-res').css('top') == '0px') {
+                //     $('.nav-btn.icon-menu').click(function() {
+                //         $('.nav-res').css('top', '-55px');
+                //         $(this).css('top', '0px');
+                //     });
+                // }
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            $("a.smooth").on("click", function (e) {
+                var t = $(this);
+                var n = t.attr("href");
+                $("html, body").stop().animate({
+                    scrollTop: $(n).offset().top
+                }, 1e3)
+            })
+        });
+    </script>
+
+</head>
+<body>
+    
+    <i class="nav-btn icon-menu"></i>
+
+    <div class="nav-res">
+        <ul>
+            <li><a class="smooth" href="#home">HOME</a></li>
+            <li><a class="smooth" href="#colors">COLORS</a></li>
+            <li><a class="smooth" href="#icons">ICONS</a></li>
+            <li><a class="smooth" href="#fonts">FONTS</a></li>
+            <li><a class="smooth" href="#buttons">BUTTONS</a></li>
+            <li><a class="smooth" href="#share-bar">SHARE BAR</a></li>
+            <li><a class="smooth" href="#messages">MESSAGES</a></li>
+            <li><a class="smooth" href="#image-titles">IMAGE TITLES</a></li>
+            <li><a class="smooth" href="#grid">GRID</a></li>
+        </ul>
+    </div>
+    
+    <div class="row bg-yellow" id="home">
+        <div class="row-inside">
+            <h1 class="big-title">COOKING FRAMEWORK <span style="font-weight: 100; font-size: 0.5em;">beta</span></h1>
+            <h2 class="title-white">A SASS framework by <a href="http://elhombretecla.com" target="_blank">elhombretecla</a></h2>
+            <div class="share-bar">
+                <a href="https://twitter.com/elhombretecla" class="twitter" target="_blank"><i class="icon-twitter"></i></a>
+                <a href="http://github.com/elhombretecla" class="like" target="_blank">Fork me on GitHub <i class="icon-heart"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row bg-white dashed" id="colors">
+        <div class="row-inside">
+            <h1>COLORS</h1>
+            <h4>SASS variables</h4>
+            <div class="color primary-color">primary-color</div>
+            <div class="color light-color">light-gray</div>
+            <div class="color pearl-color">pearl-gray</div>
+            <div class="color medium-color">medium-gray</div>
+            <div class="color dark-color">dark-gray</div>
+            <div class="color error-color last">error</div>
+            <div class="color success-color">success</div>
+            <div class="color info-color">info</div>
+            <div class="color facebook-color">facebook</div>
+            <div class="color twitter-color">twitter</div>
+            <div class="color google-color">google</div>
+            <div class="color instagram-color last">instagram</div>
+            <div class="color youtube-color">youtube</div>
+            <div class="color pinterest-color">pinterest</div>
+            <div class="color linkedin-color">linkedin</div>
+            <div class="color vimeo-color">vimeo</div>
+        </div>
+    </div>
+
+    <div class="row bg-lightgray" id="icons">
+        <div class="row-inside">
+            <h1>ICONS</h1>
+            <h4>Need link in head: /font-framework/style.css</h4>
+            <div class="icons"><i class="icon-home"></i><p>icon-home</p></div>
+            <div class="icons"><i class="icon-pencil"></i><p>icon-pencil</p></div>
+            <div class="icons"><i class="icon-image"></i><p>icon-iamge</p></div>
+            <div class="icons"><i class="icon-images"></i><p>icon-images</p></div>
+            <div class="icons"><i class="icon-play"></i><p>icon-play</p></div>
+            <div class="icons last"><i class="icon-film"></i><p>icon-film</p></div>
+            <div class="icons"><i class="icon-file"></i><p>icon-file</p></div>
+            <div class="icons"><i class="icon-profile"></i><p>icon-profile</p></div>
+            <div class="icons"><i class="icon-file2"></i><p>icon-file2</p></div>
+            <div class="icons"><i class="icon-copy"></i><p>icon-copy</p></div>
+            <div class="icons"><i class="icon-tag"></i><p>icon-tag</p></div>
+            <div class="icons last"><i class="icon-cart"></i><p>icon-cart</p></div>
+            <div class="icons"><i class="icon-credit"></i><p>icon-credit</p></div>
+            <div class="icons"><i class="icon-address-book"></i><p>icon-address-book</p></div>
+            <div class="icons"><i class="icon-notebook"></i><p>icon-notebook</p></div>
+            <div class="icons"><i class="icon-pushpin"></i><p>icon-pushpin</p></div>
+            <div class="icons"><i class="icon-location"></i><p>icon-location</p></div>
+            <div class="icons last"><i class="icon-map"></i><p>icon-map</p></div>
+            <div class="icons"><i class="icon-map2"></i><p>icon-map2</p></div>
+            <div class="icons"><i class="icon-bell"></i><p>icon-bell</p></div>
+            <div class="icons"><i class="icon-calendar"></i><p>icon-calendar</p></div>
+            <div class="icons"><i class="icon-calendar2"></i><p>icon-calendar2</p></div>
+            <div class="icons"><i class="icon-print"></i><p>icon-print</p></div>
+            <div class="icons last"><i class="icon-screen"></i><p>icon-screen</p></div>
+            <div class="icons"><i class="icon-laptop"></i><p>icon-laptop</p></div>
+            <div class="icons"><i class="icon-mobile"></i><p>icon-mobile</p></div>
+            <div class="icons"><i class="icon-mobile2"></i><p>icon-mobile2</p></div>
+            <div class="icons"><i class="icon-tablet"></i><p>icon-tablet</p></div>
+            <div class="icons"><i class="icon-tv"></i><p>icon-tv</p></div>
+            <div class="icons last"><i class="icon-download"></i><p>icon-download</p></div>
+            <div class="icons"><i class="icon-upload"></i><p>icon-upload</p></div>
+            <div class="icons"><i class="icon-bubble"></i><p>icon-bubble</p></div>
+            <div class="icons"><i class="icon-bubbles"></i><p>icon-bubbles</p></div>
+            <div class="icons"><i class="icon-bubble2"></i><p>icon-bubble2</p></div>
+            <div class="icons"><i class="icon-user"></i><p>icon-user</p></div>
+            <div class="icons last"><i class="icon-users"></i><p>icon-users</p></div>
+            <div class="icons"><i class="icon-quotes-left"></i><p>icon-quotes-left</p></div>
+            <div class="icons"><i class="icon-search"></i><p>icon-search</p></div>
+            <div class="icons"><i class="icon-zoomin"></i><p>icon-zoomin</p></div>
+            <div class="icons"><i class="icon-zoomout"></i><p>icon-zoomout</p></div>
+            <div class="icons"><i class="icon-cog"></i><p>icon-cog</p></div>
+            <div class="icons last"><i class="icon-stats"></i><p>icon-stats</p></div>
+            <div class="icons"><i class="icon-mug"></i><p>icon-mug</p></div>
+            <div class="icons"><i class="icon-food"></i><p>icon-food</p></div>
+            <div class="icons"><i class="icon-remove"></i><p>icon-remove</p></div>
+            <div class="icons"><i class="icon-menu"></i><p>icon-menu</p></div>
+            <div class="icons"><i class="icon-bookmark"></i><p>icon-bookmark</p></div>
+            <div class="icons last"><i class="icon-star"></i><p>icon-star</p></div>
+            <div class="icons"><i class="icon-heart"></i><p>icon-heart</p></div>
+            <div class="icons"><i class="icon-heart2"></i><p>icon-heart2</p></div>
+            <div class="icons"><i class="icon-smiley"></i><p>icon-smiley</p></div>
+            <div class="icons"><i class="icon-sad"></i><p>icon-sad</p></div>
+            <div class="icons"><i class="icon-cancel-circle"></i><p>icon-cancel-circle</p></div>
+            <div class="icons last"><i class="icon-checkmark-circle"></i><p>icon-checkmark-circle</p></div>
+            <div class="icons"><i class="icon-close"></i><p>icon-close</p></div>
+            <div class="icons"><i class="icon-checkmark"></i><p>icon-checkmark</p></div>
+            <div class="icons"><i class="icon-minus"></i><p>icon-minus</p></div>
+            <div class="icons"><i class="icon-plus"></i><p>icon-plus</p></div>
+            <div class="icons"><i class="icon-loop"></i><p>icon-loop</p></div>
+            <div class="icons last"><i class="icon-arrow-up-left"></i><p>icon-arrow-up-left</p></div>
+            <div class="icons"><i class="icon-arrow-up"></i><p>icon-arrow-up</p></div>
+            <div class="icons"><i class="icon-arrow-up-right"></i><p>icon-arrow-up-right</p></div>
+            <div class="icons"><i class="icon-arrow-down-right"></i><p>icon-arrow-down-right</p></div>
+            <div class="icons"><i class="icon-arrow-down"></i><p>icon-arrow-down</p></div>
+            <div class="icons"><i class="icon-arrow-down-left"></i><p>icon-arrow-down-left</p></div>
+            <div class="icons last"><i class="icon-arrow-left"></i><p>icon-arrow-left</p></div>
+            <div class="icons"><i class="icon-code"></i><p>icon-code</p></div>
+            <div class="icons"><i class="icon-share"></i><p>icon-share</p></div>
+            <div class="icons"><i class="icon-mail"></i><p>icon-mail</p></div>
+            <div class="icons"><i class="icon-mail2"></i><p>icon-mail2</p></div>
+            <div class="icons"><i class="icon-google"></i><p>icon-google</p></div>
+            <div class="icons last"><i class="icon-googleplus"></i><p>icon-googleplus</p></div>
+            <div class="icons"><i class="icon-googleplus2"></i><p>icon-googleplus2</p></div>
+            <div class="icons"><i class="icon-facebook"></i><p>icon-facebook</p></div>
+            <div class="icons"><i class="icon-facebook2"></i><p>icon-facebook2</p></div>
+            <div class="icons"><i class="icon-instagram"></i><p>icon-instagram</p></div>
+            <div class="icons"><i class="icon-twitter"></i><p>icon-twitter</p></div>
+            <div class="icons last"><i class="icon-twitter2"></i><p>icon-twitter2</p></div>
+            <div class="icons"><i class="icon-youtube"></i><p>icon-youtube</p></div>
+            <div class="icons"><i class="icon-youtube2"></i><p>icon-youtube2</p></div>
+            <div class="icons"><i class="icon-vimeo"></i><p>icon-vimeo</p></div>
+            <div class="icons"><i class="icon-vimeo2"></i><p>icon-vimeo2</p></div>
+            <div class="icons"><i class="icon-apple"></i><p>icon-apple</p></div>
+            <div class="icons last"><i class="icon-android"></i><p>icon-android</p></div>
+            <div class="icons"><i class="icon-linkedin"></i><p>icon-linkedin</p></div>
+            <div class="icons"><i class="icon-pinterest"></i><p>icon-pinterest</p></div>
+            <div class="icons"><i class="icon-pinterest2"></i><p>icon-pinterest2</p></div>
+            <div class="icons"><i class="icon-paypal"></i><p>icon-paypal</p></div>
+            <div class="icons"><i class="icon-paypal2"></i><p>icon-paypal2</p></div>
+            <div class="icons last"><i class="icon-chrome"></i><p>icon-chrome</p></div>
+            <div class="icons"><i class="icon-firefox"></i><p>icon-firefox</p></div>
+            <div class="icons"><i class="icon-IE"></i><p>icon-IE</p></div>
+            <div class="icons"><i class="icon-opera"></i><p>icon-opera</p></div>
+            <div class="icons"><i class="icon-safari"></i><p>icon-safari</p></div>
+        </div>
+    </div>
+
+    <div class="row bg-lightgray dashed">
+        <div class="row-inside">
+            <h1>COCINA ICONS</h1>
+            <h4>Need link in head: /cocina-icons/cocina-icons.css</h4>
+            <div class="icons cocina-icons"><i class="icon-salsas"></i><p>icon-salsas</p></div>
+            <div class="icons cocina-icons"><i class="icon-postres"></i><p>icon-postres</p></div>
+            <div class="icons cocina-icons"><i class="icon-entrantes"></i><p>icon-entrantes</p></div>
+            <div class="icons cocina-icons"><i class="icon-estrella"></i><p>icon-estrella</p></div>
+            <div class="icons cocina-icons last"><i class="icon-segundos"></i><p>icon-segundos</p></div>
+            <div class="icons cocina-icons"><i class="icon-cocteles"></i><p>icon-cocteles</p></div>
+            <div class="icons cocina-icons"><i class="icon-tostas"></i><p>icon-tostas</p></div>
+            <div class="icons cocina-icons"><i class="icon-acompanamientos"></i><p>icon-acompanamientos</p></div>
+            <div class="icons cocina-icons"><i class="icon-principal"></i><p>icon-principal</p></div>
+            <div class="icons cocina-icons"><i class="icon-bebidas"></i><p>icon-bebidas</p></div>
+            <div class="icons cocina-icons last"><i class="icon-bocadillos"></i><p>icon-bocadillos</p></div>
+            <div class="icons cocina-icons"><i class="icon-unico"></i><p>icon-unico</p></div>
+            <div class="icons cocina-icons"><i class="icon-primeros"></i><p>icon-primeros</p></div>
+            <div class="icons cocina-icons"><i class="icon-ensaladas"></i><p>icon-ensaladas</p></div>
+        </div>
+    </div>
+
+    <div class="row bg-white dashed" id="fonts">
+        <div class="row-inside">
+            <h1 style="text-align: center;">FONT GOTHAM</h1>
+            
+            <h1>Canal Cocina title h1</h1>
+            <h2>Canal Cocina title h2</h2>
+            <h3>Canal Cocina title h3</h3>
+            <h4>Canal Cocina title h4</h4>
+            <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, quaerat, voluptate rem nesciunt atque ad sapiente et repellat harum adipisci eos aliquam quia natus excepturi quidem neque ipsum cumque velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, quaerat, voluptate rem nesciunt atque ad sapiente et repellat harum adipisci eos aliquam quia natus excepturi quidem neque ipsum cumque velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, quaerat, voluptate rem nesciunt atque ad sapiente et repellat harum adipisci eos aliquam quia natus excepturi quidem neque ipsum cumque velit.</p>
+        </div>
+    </div>
+
+    <div class="row bg-lightgray dashed" id="buttons">
+        <div class="row-inside">
+            <h1>BUTTONS</h1>
+            <h4>Use <span class="tag-code">.btn</span> and the specific class for each button</h4>        
+            
+            <a href="#" class="btn">Regular button</a>
+            <br /><br />
+            <h2>Colored buttons</h2>
+
+            <a href="#" class="btn btn-gray">.btn-gray button</a>
+            <a href="#" class="btn btn-yellow">.btn-yellow button</a>
+            <a href="#" class="btn btn-red">.btn-red button</a>
+            <a href="#" class="btn btn-green">.btn-green button</a>
+            <a href="#" class="btn btn-blue">.btn-blue button</a>
+
+            <br /><br />
+            <h2>Smaller buttons</h2>
+            <h4>Use <span class="tag-code">.btn-mini</span> to use it</h4>
+            <a href="#" class="btn btn-mini">Button smaller</a>
+            <a href="#" class="btn btn-mini btn-gray">.btn-gray smaller</a>
+            <a href="#" class="btn btn-mini btn-yellow">.btn-yellow smaller</a>
+            <a href="#" class="btn btn-mini btn-red">.btn-red smaller</a>
+            <a href="#" class="btn btn-mini btn-green">.btn-green smaller</a>
+            <a href="#" class="btn btn-mini btn-blue">.btn-blue smaller</a>
+
+        </div>
+    </div>
+
+    <div class="row bg-white dashed" id="share-bar">
+        <div class="row-inside">
+            <h1>SHARE BAR</h1>
+            <h4>Use <span class="tag-code">.share-bar</span> and <span class="tag-code">a</span> tags with social icons</h4>        
+            
+            <div class="share-bar">
+                <a class="facebook" href="###" title="Facebook"><i class="icon-facebook"></i></a>
+                <a class="twitter" href="###" title="Twitter"><i class="icon-twitter"></i></a>
+                <a class="googleplus" href="###" title="Google Plus"><i class="icon-googleplus"></i></a>
+                <a class="instagram" href="###" title="Instagram"><i class="icon-instagram"></i></a>
+                <a class="pinterest" href="###" title="Pinterest"><i class="icon-pinterest"></i></a>
+                <a class="linkedin" href="###" title="Linkedin"><i class="icon-linkedin"></i></a>
+                <a class="youtube" href="###" title="Youtube"><i class="icon-youtube"></i></a>
+                <a class="vimeo" href="###" title="Vimeo"><i class="icon-vimeo"></i></a>
+                <a class="mail" href="###" title="Mail"><i class="icon-mail2"></i></a>
+                <a class="print" href="###" title="Imprimir"><i class="icon-print"></i></a>
+                <a class="like" href="###" title="Me gusta"><i class="icon-heart"></i></a>
+            </div>
+
+            <xmp>
+            <div class="share-bar">
+                <a class="facebook" href="###" title="Facebook"><i class="icon-facebook"></i></a>
+                <a class="twitter" href="###" title="Twitter"><i class="icon-twitter"></i></a>
+                <a class="googleplus" href="###" title="Google Plus"><i class="icon-googleplus"></i></a>
+                <a class="instagram" href="###" title="Instagram"><i class="icon-instagram"></i></a>
+                <a class="pinterest" href="###" title="Pinterest"><i class="icon-pinterest"></i></a>
+                <a class="linkedin" href="###" title="Linkedin"><i class="icon-linkedin"></i></a>
+                <a class="youtube" href="###" title="Youtube"><i class="icon-youtube"></i></a>
+                <a class="vimeo" href="###" title="Vimeo"><i class="icon-vimeo"></i></a>
+                <a class="mail" href="###" title="Mail"><i class="icon-mail2"></i></a>
+                <a class="print" href="###" title="Imprimir"><i class="icon-print"></i></a>
+                <a class="like" href="###" title="Me gusta"><i class="icon-heart"></i></a>
+            </div>
+            </xmp>
+
+        </div>
+    </div>
+
+    <div class="row bg-lightgray dashed" id="messages">
+        <div class="row-inside">
+            <h1>MESSAGES</h1>
+            <h4>Use <span class="tag-code">.msg</span> to convert an element into a fixed message</h4>        
+            
+            <a id="btn-msg-1" class="btn btn-mini">Show regular message</a>
+            <a id="btn-msg-2" class="btn btn-mini btn-red">Show error message</a>
+            <a id="btn-msg-3" class="btn btn-mini btn-green">Show succes message</a>
+            <a id="btn-msg-4" class="btn btn-mini btn-blue">Show info message</a>
+            <a id="btn-msg-5" class="btn btn-mini btn-yellow">Show alert message</a>
+
+            <xmp>
+                <div id="msg" class="msg msg-red">
+                    <i id="close-msg" class="icon-cancel-circle"></i>
+                    <h3>Example message</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dicta, a,
+                    expedita libero vero repellat placeat modi quos tenetur alias totam laboriosam
+                    voluptatum aspernatur quis aut reprehenderit deserunt maxime obcaecati?</p>
+                </div>
+            </xmp>
+
+        </div>
+    </div>
+
+
+    <div class="row bg-white dashed" id="image-titles">
+        <div class="row-inside">
+            <h1>IMAGE TITLES</h1>
+            <h4>Set parent element to <span class="tag-code">relative</span> , then and add this classes:</h4>        
+            
+            <div class="big-element">
+                <a href="###"><img src="http://elhombretecla.com/wp-content/uploads/2011/06/awesome-impossible-creatures-6.jpg" alt="" border="0"></a>
+                <div class="title-inside-big">
+                    <a href="###">Title inside big element</a>
+                </div>
+            </div>
+
+            <xmp>
+                <div class="big-element">
+                    <a href="#"><img src="image src" alt="alt" border="0"></a>
+                    <div class="title-inside-big">
+                        <a href="#">Title inside big element</a>
+                    </div>
+                </div>
+            </xmp>
+
+            <div class="small-element">
+                <a href="###"><img src="http://elhombretecla.com/wp-content/uploads/2011/06/awesome-impossible-creatures-6.jpg" alt="" border="0"></a>
+                <div class="title-inside-small">
+                    <a href="###">Title inside small element</a>
+                </div>
+            </div>
+
+            <xmp>
+                <div class="small-element">
+                    <a href="#"><img src="image src" alt="alt" border="0"></a>
+                    <div class="title-inside-big">
+                        <a href="#">Title inside small element</a>
+                    </div>
+                </div>
+            </xmp>
+
+        </div>
+    </div>
+
+    <div class="row bg-lightgray dashed" id="grid">
+        <div class="row-inside">
+            <h1>GRID</h1>
+            <h4>A SASS grid. Defining functions and variables</h4>        
+            
+            <p>Choose a grid width, the number of columns and the margin between columns.</p>
+            <p>The result of the following equation has to be an integer, not a fraction:</p><br/>
+            <p><span class="tag-code">(width - (columns - 1) * col_margin) / columns = N</span></p>
+
+            <h4>For example:</h4>
+            <xmp>
+                $width: 1200px;   /* total with of page */
+                $columns: 12;    /* number of columns */
+                $col_margin: 0;  /* margin between columns */
+            </xmp>
+
+            <h4>Math magic</h4>
+            <xmp>
+                $col_width: ($width - ($col_margin * ($columns - 1))) / $columns;
+                $col_total_width: $col_width + $col_margin; 
+            </xmp>
+
+            <h4>Create a column div</h4>
+            <xmp>
+                @mixin col($n: 1) {
+                    float: left;
+                    @include span($n);
+                }
+            </xmp>
+
+            <h4>Make an element span n columns</h4>
+            <xmp>
+                @mixin span($n: 1) {
+                    width: ($n * $col_width) + (($n - 1) * $col_margin);
+                    @if $n == $columns {
+                        margin-right: 0;
+                    } @else {
+                        margin-right: $col_margin;
+                    }
+                }
+            </xmp>
+            
+            <h4>The last column in a row needs this</h4>
+            <xmp>
+                @mixin last() {
+                    margin-right: 0;
+                }
+            </xmp>
+
+            <h4>Completely compatible with CSS.<br />The CSS classes and ID’s can still retain semantic names, and the presentation logic remains where it should be:</h4>
+
+            <xmp>
+            .section { @include row; }
+                .section .main { @include col(18); }
+                .section .sidebar { @include col(6); @include last; }
+                .section .promo { 
+                    @include col(12); 
+                    @include prepend(6); 
+                    @include append(6); 
+                    @include last;
+            }
+            </xmp>
+            
+            <p>Thanks to <a href="https://github.com/olav" target="_blank">Olav Bjorkoy</a> for the support.</p>
+
+        </div>
+    </div>
+
+    <div class="row bg-yellow" id="footer">
+        <div class="row-inside">
+            
+            <div class="share-bar">
+                <a href="https://twitter.com/elhombretecla" class="twitter" target="_blank"><i class="icon-twitter"></i></a>
+                <a href="http://github.com/elhombretecla" class="like" target="_blank">Fork me on GitHub <i class="icon-heart"></i></a>
+                <a href="#home" class="smooth googleplus">Back to top <i class="icon-arrow-up"></i></a>
+                <p style="color: white; margin-top: 15px;"><i class="icon-code"></i> by elhombretecla</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MESSAGES -->
+    <div class="msg msg-gray" id="msg">
+        <i id="close-msg" class="icon-cancel-circle"></i>
+        <h3>Example message .msg-gray</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dicta, a,
+        expedita libero vero repellat placeat modi quos tenetur alias totam laboriosam
+        voluptatum aspernatur quis aut reprehenderit deserunt maxime obcaecati?</p>
+    </div>
+    <div class="msg msg-red" id="msg">
+        <i id="close-msg" class="icon-cancel-circle"></i>
+        <h3>Example message .msg-red</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dicta, a,
+        expedita libero vero repellat placeat modi quos tenetur alias totam laboriosam
+        voluptatum aspernatur quis aut reprehenderit deserunt maxime obcaecati?</p>
+    </div>
+    <div class="msg msg-green" id="msg">
+        <i id="close-msg" class="icon-cancel-circle"></i>
+        <h3>Example message .msg-green</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dicta, a,
+        expedita libero vero repellat placeat modi quos tenetur alias totam laboriosam
+        voluptatum aspernatur quis aut reprehenderit deserunt maxime obcaecati?</p>
+    </div>
+    <div class="msg msg-blue" id="msg">
+        <i id="close-msg" class="icon-cancel-circle"></i>
+        <h3>Example message .msg-blue</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dicta, a,
+        expedita libero vero repellat placeat modi quos tenetur alias totam laboriosam
+        voluptatum aspernatur quis aut reprehenderit deserunt maxime obcaecati?</p>
+    </div>
+    <div class="msg msg-yellow" id="msg">
+        <i id="close-msg" class="icon-cancel-circle"></i>
+        <h3>Example message .msg-yellow</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dicta, a,
+        expedita libero vero repellat placeat modi quos tenetur alias totam laboriosam
+        voluptatum aspernatur quis aut reprehenderit deserunt maxime obcaecati?</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+@mixin box-sizing($box) {
+    -webkit-box-sizing: $box;
+    -moz-box-sizing: $box;
+    -ms-box-sizing: $box;
+    box-sizing: $box;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin transition($time, $type) {
+    -webkit-transition: all $time $type;
+    -moz-transition: all $time $type;
+    -o-transition: all $time $type;
+    transition: all $time $type;
+}
+
+@mixin translate($X, $Y) {
+    -webkit-transform: translate($X, $Y);
+    -moz-transform: translate($X, $Y);
+    -o-transform: translate($X, $Y);
+    -ms-transform: translate($X, $Y);
+    transform: translate($X, $Y);
+}
+
+@mixin translate-3d($X, $Y, $Z) {
+    -webkit-transform: translate3d($X, $Y, $Z);
+    -moz-transform: translate3d($X, $Y, $Z);
+    -o-transform: translate3d($X, $Y, $Z);
+    -ms-transform: translate3d($X, $Y, $Z);
+    transform: translate3d($X, $Y, $Z);
+}
+
+@mixin scale-3d($value) {
+    -webkit-transform: scale3d($value, $value, $value);
+    -moz-transform: scale3d($value, $value, $value);
+    -o-transform: scale3d($value, $value, $value);
+    -ms-transform: scale3d($value, $value, $value);
+    transform: scale3d($value, $value, $value);
+}
+
+@mixin rotate($value) {
+    -moz-transform: rotate($value);
+    -webkit-transform: rotate($value);
+    -o-transform: rotate($value);
+    -ms-transform: rotate($value);
+}
+
+@mixin grayscale($value) {
+    -webkit-filter: grayscale($value);
+    -moz-filter: grayscale($value);
+    -o-filter: grayscale($value);
+    -ms-filter: grayscale($value);
+    filter: grayscale($value);
+}
+
+@mixin saturate($value) {
+    -webkit-filter: saturate($value);
+    -moz-filter: saturate($value);
+    -o-filter: saturate($value);
+    -ms-filter: saturate($value);
+    filter: saturate($value);
+}
+@mixin ribbon($border1, $border2, $color1, $color2) {
+    background-color: $color1;
+    border-top: $border1 solid $color1;
+    border-bottom: $border1 solid $color1;
+    border-left: $border2 solid $color2;
+    border-right: $border2 solid $color2;
+    line-height: 0;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
