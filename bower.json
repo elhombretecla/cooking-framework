@@ -1,0 +1,31 @@
+{
+  "name": "Cooking Framework",
+  "version": "1.0.0",
+  "description": "An easy SASS framework for the web",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "Cocina",
+    "Framework",
+    "Website"
+  ],
+  "authors": [
+    "Elhombretecla"
+  ],
+  "license": "MIT",
+  "homepage": "http://elhombretecla.com/code/cooking-framework",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.0",
+    "animate.css": "~3.2.0",
+    "modernizr": "~2.8.3"
+  }
+}

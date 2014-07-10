@@ -19,6 +19,19 @@
     display: inline-block;
 }
 
+// COLUMNS
+.col-1of2 {
+    @include col($n: 6);
+}
+
+.col-1of3 {
+    @include col($n: 4);
+}
+
+.col-1of4 {
+    @include col($n: 3);
+}
+
 // FONTS
 @font-face {
     font-family: 'gotham';
@@ -74,6 +87,11 @@
     font-weight: bold;
     font-style: normal;
 }
+
+strong {
+    font-weight: 500;
+}
+
 // TEXT SELECTION
 ::selection {
   background: $primary-color;
@@ -108,6 +126,7 @@ a {
     .row-inside {
         max-width: 1200px;
         width: 100%;
+        display: table;
         margin: 0 auto;
     }
     .row-center {
@@ -136,11 +155,13 @@ h2 {
 h3 {
     font-size: 1.6em;
     font-weight: 500;
+    margin-bottom: 15px;
 }
 
 h4 {
     font-size: 1.2em;
     font-weight: 500;
+    margin-bottom: 12px;
 }
 
 // TITLE BOXES
@@ -154,6 +175,7 @@ h4 {
     text-transform: uppercase;
     width: 100%;
     padding: 1.6% 3%;
+    line-height: 1.2;
     a {
         color: white;
         &:hover {
@@ -165,6 +187,8 @@ h4 {
 .title-inside-small {
     @extend .title-inside-big;
     font-size: 1.4em;
+    font-weight: 200;
+    text-transform: none;
 }
 
 // BTN
@@ -285,6 +309,13 @@ h4 {
         &:hover {
             background-color: $primary-color;
         }
+        &.text {
+            font-size: 0.8em;
+            color: #7c7c7c;
+            &:hover {
+                background-color: transparent;
+            }
+        }
     }
 }
 
@@ -393,12 +424,27 @@ h4 {
 
 // RESPONSIVE UI
 @media screen and (max-width: 900px) {
+    .left {
+        width: 100%;
+        float: none;
+    }
+    .right {
+        float: none;
+    }
+    .col-1of2, .col-1of3 {
+        width: 100%;
+        float: none;
+    }
     .msg {
         i { float: none; font-size: 2em; }
     }
 }
 
 @media screen and (max-width: 500px) {
+    .col-1of4 {
+        width: 100%;
+        float: none;
+    }
     .title-inside-big { font-size: 1.8em; }
     .title-inside-small { font-size: 1em; }
     .btn { width: 90%; }
